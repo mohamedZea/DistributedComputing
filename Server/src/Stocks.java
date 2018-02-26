@@ -6,6 +6,7 @@ public class Stocks{
     public String _code;
     public int _amount;
     public double _unitPrice;
+    public String _owner;
 
     public static String Serialize(Stocks obj){
         Gson gs = new Gson();
