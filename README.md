@@ -4,6 +4,7 @@
 - Type (Bids, Asks)
 - Code (AAPL,IBM,MSFT,ORCL)
 - Amount
+- Price
 
 ## Processing
 ### Client
