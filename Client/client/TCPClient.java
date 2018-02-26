@@ -54,12 +54,15 @@ public class TCPClient {
         }*/
 
         Stocks sto = new Stocks();
-        sto._type = StockType.Ask;
+        sto._type = StockType.Bids;
         sto._code = "123";
         sto._amount = 10;
         sto._unitPrice = 1;
 
-        toServer.writeBytes((line = user.input()) + '\n');
+        Gson obj = new Gson();
+        obj.toJSon(sto);
+
+        toServer.writeBytes(obj.tostring() + '\n');
 
         return holdTheLine;
     }
