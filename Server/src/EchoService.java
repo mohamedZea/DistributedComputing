@@ -1,5 +1,3 @@
-package examples;
-
 // 22.10. 10
 
 /**
