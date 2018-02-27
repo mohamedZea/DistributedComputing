@@ -129,7 +129,11 @@ public class StockService extends Thread {
 
     public void SendStocks(Stocks sto){
         try {
-            toClient.writeBytes(Stocks.Serialize(sto) + "\n");
+            if(fromClient.read() != -1){
+                toClient.writeBytes(Stocks.Serialize(sto) + "\n");
+            }else{
+                System.out.println("Imposible to reach " + sto._owner);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
