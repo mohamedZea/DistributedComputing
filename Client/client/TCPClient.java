@@ -1,17 +1,5 @@
 package client;
-
-/*
- * 22. 10. 10
- */
-
-/**
- * @author Peter Altenberd
- * (Translated into English by Ronald Moore)
- * Computer Science Dept.                   Fachbereich Informatik
- * Darmstadt Univ. of Applied Sciences      Hochschule Darmstadt
- */
-
-import org.json.;
+import com.google.gson.Gson;
 
 import java.io.*;
 import java.lang.reflect.Array;
@@ -20,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TCPClient {
-
+    //static boolean waiting;
     static String line;
     static Socket socket;
     static BufferedReader fromServer;
@@ -28,47 +16,44 @@ public class TCPClient {
     static UserInterface user = new UserInterface();
 
     public static void main(String[] args) throws Exception {
-        socket = new Socket("172.17.2.0", 9999);
-        toServer = new DataOutputStream(     // Datastream FROM Server
-                socket.getOutputStream());
-        fromServer = new BufferedReader(     // Datastream TO Server
-                new InputStreamReader(socket.getInputStream()));
-        while (sendRequest()) {              // Send requests while connected
-            receiveResponse();                 // Process server's answer
+
+        try {
+            socket = new Socket("172.17.1.130", 9999);
+            toServer = new DataOutputStream(socket.getOutputStream());
+            InputStreamReader dataInputStream = new InputStreamReader(socket.getInputStream());
+            fromServer = new BufferedReader(dataInputStream);
+            do {
+                sendRequest();
+                receiveResponse();
+            }while(true);/*
+            toServer.writeBytes("."+ '\n');
+            socket.close();
+            toServer.close();
+            fromServer.close();*/
+        }catch(Exception e){
+               System.err.println("Exception: " + e.toString());
+            }
         }
-        socket.close();
-        toServer.close();
-        fromServer.close();
-    }
 
-    private static boolean sendRequest() throws IOException {
-        boolean holdTheLine = true;          // Connection exists
-
-        /*List<Client> clients = new ArrayList<Client>();
-        Client cl = new Client();
-        cl.id_client = 1;
-        cl.name = "Mohamed";
-
-        for (Client cl: clients) {
-
-        }*/
-
+    private static void sendRequest() throws IOException {
         Stocks sto = new Stocks();
-        sto._type = StockType.Bids;
-        sto._code = "123";
-        sto._amount = 10;
-        sto._unitPrice = 1;
-
-        Gson obj = new Gson();
-        obj.toJSon(sto);
-
-        toServer.writeBytes(obj.tostring() + '\n');
-
-        return holdTheLine;
+        sto.createRandomStock();
+        System.out.println(Stocks.Serialize(sto));
+        toServer.writeBytes(Stocks.Serialize(sto)+ '\n');
     }
 
-    private static void receiveResponse() throws IOException {
-        user.output("Server answers: " +
-                new String(fromServer.readLine()) + '\n');
+    private static boolean receiveResponse() throws IOException {
+        boolean test = true;
+        String serverResponse = fromServer.readLine();
+        user.output("Server answers: " + serverResponse + '\n');
+        if (!serverResponse.equals("wait")){
+            try{
+                Stocks.Deserialize(serverResponse);
+                test = false;
+            }catch(Exception e){
+               // e.printStackTrace();
+            }
+        }
+        return test;
     }
 }
