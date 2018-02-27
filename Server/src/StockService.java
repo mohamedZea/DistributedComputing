@@ -33,12 +33,18 @@ public class StockService extends Thread {
                 line = fromClient.readLine();              // Read Request
                 System.out.println("Received: " + line);
                 if(line != null || !line.equals(".")) {
-                    ProcessRequest(line);
-                    System.out.println(stockManager.BidsList);
-                    System.out.println(stockManager.AsksList);
+                    try {
+                        Stocks.Deserialize(line);
+
+                        ProcessRequest(line);
+                        System.out.println(stockManager.BidsList);
+                        System.out.println(stockManager.AsksList);
+
+                    } catch (Exception e) {
+
+                    }
                 }
                 if (line.equals(".")) verbunden = false;   // Break Conneciton?
-
             }
             fromClient.close();
             toClient.close();
