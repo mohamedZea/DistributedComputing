@@ -32,9 +32,13 @@ public class StockService extends Thread {
             while (verbunden) {     // repeat as long as connection exists
                 line = fromClient.readLine();              // Read Request
                 System.out.println("Received: " + line);
-                ProcessRequest(line);
+                if(line != null) {
+                    ProcessRequest(line);
+                    //For Testing
+                    //SendStocks(Stocks.Deserialize(line));
+                }
                 if (line.equals(".")) verbunden = false;   // Break Conneciton?
-                else toClient.writeBytes(line.toUpperCase() + '\n'); // Response
+                //else toClient.writeBytes(line.toUpperCase() + '\n'); // Response
             }
 
 
@@ -65,7 +69,10 @@ public class StockService extends Thread {
 
     private void BidForStock() {
         try {
-            wait();
+            synchronized (this) {
+                wait();
+            }
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -73,12 +80,9 @@ public class StockService extends Thread {
 
     private void AskForStock(Stocks sto) {
         Optional<Stocks> tmp = null;
-        do {
-            if (tmp == null || !tmp.isPresent()) {
-                continue;
-            }
-            Match(sto,tmp.get());
-        } while (!(tmp = stockManager.FindMatch(sto)).isPresent());
+        while (!(tmp = stockManager.FindMatch(sto)).isPresent()){
+        }
+        Match(sto,tmp.get());
     }
 
     void Match(Stocks ask, Stocks bid){
@@ -102,10 +106,13 @@ public class StockService extends Thread {
     }
 
     void NotifyOwner(Stocks sto) throws IOException {
-        Optional<StockService> cli = TCPServer.ClientsList.stream().filter(x -> sto._owner == x.client.getRemoteSocketAddress().toString()).findFirst();
+        Optional<StockService> cli = TCPServer.ClientsList.stream().filter(x -> sto._owner.equals(x.client.getRemoteSocketAddress().toString())).findFirst();
         if(cli.isPresent()) {
             cli.get().SendStocks(sto);
-            cli.notify();
+            synchronized (cli) {
+                cli.notify();
+            }
+
         }
     }
 
