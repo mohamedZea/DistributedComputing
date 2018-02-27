@@ -34,14 +34,9 @@ public class StockService extends Thread {
                 System.out.println("Received: " + line);
                 if(line != null) {
                     ProcessRequest(line);
-                    //For Testing
-                    //SendStocks(Stocks.Deserialize(line));
-                }
                 if (line.equals(".")) verbunden = false;   // Break Conneciton?
-                //else toClient.writeBytes(line.toUpperCase() + '\n'); // Response
+                }
             }
-
-
             fromClient.close();
             toClient.close();
             client.close(); // End
@@ -56,7 +51,7 @@ public class StockService extends Thread {
         sto._owner = client.getRemoteSocketAddress().toString();
         stockManager.RegisterStock(sto);
         //Mettre en attente le client
-        toClient.writeBytes("null");
+        toClient.writeBytes("null" + "\n");
         //Check Updates
         if(sto._type == StockType.Ask) {
             AskForStock(sto);
@@ -118,7 +113,7 @@ public class StockService extends Thread {
 
     public void SendStocks(Stocks sto){
         try {
-            toClient.writeBytes(Stocks.Serialize(sto));
+            toClient.writeBytes(Stocks.Serialize(sto) + "\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
