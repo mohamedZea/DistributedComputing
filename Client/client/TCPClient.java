@@ -11,10 +11,13 @@ package client;
  * Darmstadt Univ. of Applied Sciences      Hochschule Darmstadt
  */
 
-import org.json.JSONObject;
+import org.json.;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.net.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TCPClient {
 
@@ -40,9 +43,26 @@ public class TCPClient {
 
     private static boolean sendRequest() throws IOException {
         boolean holdTheLine = true;          // Connection exists
-    
 
-        toServer.writeBytes((line = user.input()) + '\n');
+        /*List<Client> clients = new ArrayList<Client>();
+        Client cl = new Client();
+        cl.id_client = 1;
+        cl.name = "Mohamed";
+
+        for (Client cl: clients) {
+
+        }*/
+
+        Stocks sto = new Stocks();
+        sto._type = StockType.Bids;
+        sto._code = "123";
+        sto._amount = 10;
+        sto._unitPrice = 1;
+
+        Gson obj = new Gson();
+        obj.toJSon(sto);
+
+        toServer.writeBytes(obj.tostring() + '\n');
 
         return holdTheLine;
     }
