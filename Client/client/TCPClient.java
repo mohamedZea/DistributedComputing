@@ -11,7 +11,8 @@ package client;
  * Darmstadt Univ. of Applied Sciences      Hochschule Darmstadt
  */
 
-import org.json.;
+
+import com.google.gson.Gson;
 
 import java.io.*;
 import java.lang.reflect.Array;
@@ -54,15 +55,15 @@ public class TCPClient {
         }*/
 
         Stocks sto = new Stocks();
-        sto._type = StockType.Bids;
+        sto._type = StockType.Bid;
         sto._code = "123";
         sto._amount = 10;
         sto._unitPrice = 1;
 
         Gson obj = new Gson();
-        obj.toJSon(sto);
+        obj.toJson(sto);
 
-        toServer.writeBytes(obj.tostring() + '\n');
+        toServer.writeBytes(obj.toString() + '\n');
 
         return holdTheLine;
     }
