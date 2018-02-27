@@ -7,12 +7,15 @@
  * Darmstadt Univ. of Applied Sciences      Hochschule Darmstadt
  */
 
+import javax.xml.crypto.Data;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Optional;
 
 public class TCPServer {
 
@@ -20,43 +23,31 @@ public class TCPServer {
     static BufferedReader fromClient;
     static DataOutputStream toClient;
 
-    public static void main(String[] args) throws Exception {
-        ServerSocket contactSocket = new ServerSocket(9999);
-        while (true) {                            // Handle connection request
-            Socket client = contactSocket.accept(); // creat communication socket
-            System.out.println("Connection with: " + client.getRemoteSocketAddress());
-            handleRequests(client);
+    //Processing Lists
+
+    public static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
+    static StocksManager stockManager = new StocksManager();
+
+    public static void main(String[] args) throws Exception{
+        int port = 9999;
+        ServerSocket listenSocket = new ServerSocket(port);
+        System.out.println("Multithreaded Server starts on Port "+port);
+        while (true){
+            Socket client = listenSocket.accept();
+            //RegisterConnection(client);
+            System.out.println("Connection with: " +     // Output connection
+                    client.getRemoteSocketAddress());   // (Client) address
+            StockService s =new StockService(client,stockManager);
+            RegisterConnection(s);
+            s.start();
+
         }
     }
 
-    static void handleRequests(Socket s) {
-        try {
-            fromClient = new BufferedReader(        // Datastream FROM Client
-                    new InputStreamReader(s.getInputStream()));
-            toClient = new DataOutputStream(
-                    s.getOutputStream());                 // Datastream TO Client
-            while (receiveRequest()) {              // As long as connection exists
-                sendResponse();
-            }
-            fromClient.close();
-            toClient.close();
-            s.close();
-            System.out.println("Session ended, Server remains active");
-        } catch (Exception e) {
-            System.out.println(e);
+    static void RegisterConnection(StockService so)
+    {
+        if(!ClientsList.contains(so)) {
+            ClientsList.add(so);
         }
-    }
-
-    static boolean receiveRequest() throws IOException {
-        boolean holdTheLine = true;
-        System.out.println("Received: " + (line = fromClient.readLine()));
-        if (line.equals(".")) {                         // End of session?
-            holdTheLine = false;
-        }
-        return holdTheLine;
-    }
-
-    static void sendResponse() throws IOException {
-        toClient.writeBytes(line.toUpperCase() + '\n');  // Send answer
     }
 }
