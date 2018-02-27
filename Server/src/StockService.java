@@ -51,10 +51,12 @@ public class StockService extends Thread {
         sto._owner = client.getRemoteSocketAddress().toString();
         stockManager.RegisterStock(sto);
         //Mettre en attente le client
-        toClient.writeBytes("null" + "\n");
+        toClient.writeBytes("wait" + "\n");
         //Check Updates
         if(sto._type == StockType.Ask) {
-            AskForStock(sto);
+            synchronized (sto) {
+                AskForStock(sto);
+            }
         }
         else
         {
