@@ -4,7 +4,7 @@ import org.apache.xmlrpc.client.XmlRpcClient;
 import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;
 
 
-public class CalcClient {
+public class PriceClient {
     public static void main(String[] args) throws Exception {
 
 
@@ -23,7 +23,7 @@ public class CalcClient {
             System.out.println("About to get results...(params[0] = " + params[0]
                     + ").");
 
-            Double result = (Double) client.execute("Calculator.getPrice", params);
+            Double result = (Double) client.execute("Price.getPrice", params);
             System.out.println("Price = " + result);
         }
     }
