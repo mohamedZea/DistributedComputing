@@ -51,5 +51,6 @@ public class StocksManager {
         {
             BidsList.remove(bid);
         }
+        AsksList.remove(ask);
     }
 }

@@ -32,10 +32,13 @@ public class StockService extends Thread {
             while (verbunden) {     // repeat as long as connection exists
                 line = fromClient.readLine();              // Read Request
                 System.out.println("Received: " + line);
-                if(line != null) {
+                if(line != null || !line.equals(".")) {
                     ProcessRequest(line);
-                if (line.equals(".")) verbunden = false;   // Break Conneciton?
+                    System.out.println(stockManager.BidsList);
+                    System.out.println(stockManager.AsksList);
                 }
+                if (line.equals(".")) verbunden = false;   // Break Conneciton?
+
             }
             fromClient.close();
             toClient.close();
@@ -50,6 +53,8 @@ public class StockService extends Thread {
         Stocks sto = Stocks.Deserialize(line);
         sto._owner = client.getRemoteSocketAddress().toString();
         stockManager.RegisterStock(sto);
+        System.out.println(stockManager.BidsList);
+        System.out.println(stockManager.AsksList);
         //Mettre en attente le client
         toClient.writeBytes("wait" + "\n");
         //Check Updates
@@ -90,7 +95,7 @@ public class StockService extends Thread {
         Stocks cpyToAsk = (Stocks)ask.Clone();
         cpyToAsk._type = StockType.Bid;
 
-
+        System.out.println("Match Found between " + cpyToBid._owner + " & " + cpyToAsk._owner);
         try {
             NotifyOwner(cpyToBid);
             SendStocks(cpyToAsk);
