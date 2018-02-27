@@ -12,6 +12,8 @@ public class StockService extends Thread {
     BufferedReader fromClient;
     DataOutputStream toClient;
 
+    Object lock = new Object();
+
     StockService(Socket client, StocksManager stockManager) {
         this.client = client;
         this.stockManager = stockManager;
@@ -77,7 +79,7 @@ public class StockService extends Thread {
 
     private void BidForStock() {
         try {
-            synchronized (this) {
+            synchronized (lock) {
                 wait();
             }
 
@@ -116,9 +118,10 @@ public class StockService extends Thread {
     void NotifyOwner(Stocks sto) throws IOException {
         Optional<StockService> cli = TCPServer.ClientsList.stream().filter(x -> sto._owner.equals(x.client.getRemoteSocketAddress().toString())).findFirst();
         if(cli.isPresent()) {
-            cli.get().SendStocks(sto);
-            synchronized (cli) {
-                cli.notify();
+            StockService curr = cli.get();
+            curr.SendStocks(sto);
+            synchronized (curr.lock) {
+                curr.lock.notify();
             }
 
         }
