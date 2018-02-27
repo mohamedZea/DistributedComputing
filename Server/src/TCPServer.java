@@ -19,11 +19,6 @@ import java.util.Optional;
 
 public class TCPServer {
 
-    static String line;
-    static BufferedReader fromClient;
-    static DataOutputStream toClient;
-
-    //Processing Lists
 
     public static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
     static StocksManager stockManager = new StocksManager();
@@ -34,10 +29,9 @@ public class TCPServer {
         System.out.println("Multithreaded Server starts on Port "+port);
         while (true){
             Socket client = listenSocket.accept();
-            //RegisterConnection(client);
             System.out.println("Connection with: " +     // Output connection
                     client.getRemoteSocketAddress());   // (Client) address
-            StockService s =new StockService(client,stockManager);
+            StockService s = new StockService(client,stockManager);
             RegisterConnection(s);
             s.start();
 
