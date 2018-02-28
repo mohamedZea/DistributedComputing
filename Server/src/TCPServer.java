@@ -20,13 +20,18 @@ public class TCPServer {
 
 
     public double getPrice(String code) {
+        ArrayList<Stocks> list = new ArrayList<Stocks>();
 
-        for (Stocks s : stockManager.BidsList) {
-            if (s._code == code) {
-                return s._unitPrice;
-            }
+        stockManager.TransactionList.forEach(x -> {if(x._code == code){
+            list.add(x);
         }
-        return -1;
+        });
+
+        if(list.isEmpty()){
+            return -1;
+        }else{
+            return list.get(list.size())._unitPrice;
+        }
     }
 
     public static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
