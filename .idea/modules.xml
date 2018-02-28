@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DistributedComputing.iml" filepath="$PROJECT_DIR$/.idea/DistributedComputing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DistributedComputing.iml" filepath="$PROJECT_DIR$/DistributedComputing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Examples/Examples.iml" filepath="$PROJECT_DIR$/Examples/Examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PriceApp/PriceApp.iml" filepath="$PROJECT_DIR$/PriceApp/PriceApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
     </modules>
   </component>
 </project>
