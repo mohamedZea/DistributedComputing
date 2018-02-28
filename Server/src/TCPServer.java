@@ -22,7 +22,7 @@ public class TCPServer {
     public double getPrice(String code) {
         ArrayList<Stocks> list = new ArrayList<Stocks>();
 
-        stockManager.TransactionList.forEach(x -> {if(x._code == code){
+        stockManager.TransactionList.forEach(x -> {if(x._code.equals(code)){
             list.add(x);
         }
         });
@@ -30,7 +30,7 @@ public class TCPServer {
         if(list.isEmpty()){
             return -1;
         }else{
-            return list.get(list.size())._unitPrice;
+            return list.get(list.size()-1)._unitPrice;
         }
     }
 
