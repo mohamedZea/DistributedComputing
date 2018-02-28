@@ -15,7 +15,7 @@ public class PriceClient {
 
         XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
 
-        config.setServerURL(new URL("http://127.0.0.1:8080/xmlrpc"));
+        config.setServerURL(new URL("http://172.17.1.243:8080/xmlrpc"));
         XmlRpcClient client = new XmlRpcClient();
         client.setConfig(config);
 
