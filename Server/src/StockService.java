@@ -108,6 +108,7 @@ public class StockService extends Thread {
             NotifyOwner(cpyToBid);
             SendStocks(cpyToAsk);
             stockManager.UpdateStocks(ask,bid);
+            CsvModel.logToCSV(bid, ask);
         }
         catch (IOException e1)
         {
