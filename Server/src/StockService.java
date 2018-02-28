@@ -22,8 +22,8 @@ public class StockService extends Thread {
     @Override
     public void run() {
         String line;
-
         boolean verbunden = true;
+        TCPServer.RegisterConnection(this);
         System.out.println("Thread started: " + this); // Display Thread-ID
         try {
             fromClient = new BufferedReader              // Datastream FROM Client
@@ -51,10 +51,11 @@ public class StockService extends Thread {
             fromClient.close();
             toClient.close();
             client.close(); // End
-            System.out.println("Thread ended: " + this);
         } catch (Exception e) {
             System.out.println(e);
         }
+        System.out.println("Thread ended: " + this);
+        TCPServer.UnregisterConnection(this);
     }
 
     void ProcessRequest(String line) throws IOException {
