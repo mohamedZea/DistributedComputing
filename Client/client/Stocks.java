@@ -49,8 +49,8 @@ public class Stocks implements Cloneable{
                 break;
         }
         valueRand = rand.nextInt(9999);
-        this._unitPrice = valueRand;
-        this._amount = valueRand + 10;
+        this._unitPrice = 1000;
+        this._amount = valueRand;
 
     }
 }

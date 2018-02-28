@@ -47,10 +47,11 @@ public class TCPClient {
     private static boolean receiveResponse() throws IOException {
         boolean test = true;
         String serverResponse = fromServer.readLine();
-        user.output("Server answers: " + serverResponse + '\n');
+        user.output("--->Server answers: " + serverResponse + '\n');
         if (!serverResponse.equals("wait")){
             try{
                 Stocks.Deserialize(serverResponse);
+                user.output("---> MATCH <---");
                 test = false;
             }catch(Exception e){
                // e.printStackTrace();
