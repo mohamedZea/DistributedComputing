@@ -18,6 +18,7 @@ import java.util.*;
 
 public class TCPServer {
 
+    static final int MAX_CONNECTIONS = 10;
 
     public double getPrice(String code) {
         ArrayList<Stocks> list = new ArrayList<Stocks>();
@@ -70,18 +71,17 @@ public class TCPServer {
                 }
             }
         };
-
         thread.start();
 
         while (true)
-
         {
-            Socket client = listenSocket.accept();
-            System.out.println("Connection with: " +     // Output connection
-                    client.getRemoteSocketAddress());   // (Client) address
-            StockService s = new StockService(client, stockManager);
-            RegisterConnection(s);
-            s.start();
+            if(ClientsList.size() <= MAX_CONNECTIONS) {
+                Socket client = listenSocket.accept();
+                System.out.println("Connection with: " +     // Output connection
+                        client.getRemoteSocketAddress());   // (Client) address
+                StockService s = new StockService(client, stockManager);
+                s.start();
+            }
 
         }
 
@@ -91,5 +91,9 @@ public class TCPServer {
         if (!ClientsList.contains(so)) {
             ClientsList.add(so);
         }
+    }
+
+    static void UnregisterConnection(StockService so) {
+        ClientsList.remove(so);
     }
 }
