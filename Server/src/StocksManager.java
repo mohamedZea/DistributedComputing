@@ -5,6 +5,7 @@ public class StocksManager {
 
     public ArrayList<Stocks> AsksList = new ArrayList<Stocks>();
     public ArrayList<Stocks> BidsList = new ArrayList<Stocks>();
+    public ArrayList<Stocks> TransactionList = new ArrayList<Stocks>();
 
     public void RegisterStock(Stocks sto)
     {
@@ -51,6 +52,7 @@ public class StocksManager {
         {
             BidsList.remove(bid);
         }
+        TransactionList.add(ask);
         AsksList.remove(ask);
     }
 }

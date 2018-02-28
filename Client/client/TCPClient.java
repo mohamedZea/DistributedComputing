@@ -20,7 +20,7 @@ public class TCPClient {
     public static void main(String[] args) throws Exception {
 
         try {
-            socket = new Socket("172.17.1.130", 9999);
+            socket = new Socket("localhost", 9999);
             toServer = new DataOutputStream(socket.getOutputStream());
             InputStreamReader dataInputStream = new InputStreamReader(socket.getInputStream());
             fromServer = new BufferedReader(dataInputStream);
