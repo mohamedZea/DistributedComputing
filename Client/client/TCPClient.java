@@ -1,6 +1,8 @@
 package client;
 import com.google.gson.Gson;
 
+import com.google.gson.Gson;
+
 import java.io.*;
 import java.lang.reflect.Array;
 import java.net.*;
