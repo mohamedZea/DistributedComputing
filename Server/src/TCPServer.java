@@ -12,17 +12,9 @@ import org.apache.xmlrpc.server.XmlRpcServer;
 import org.apache.xmlrpc.server.XmlRpcServerConfigImpl;
 import org.apache.xmlrpc.webserver.WebServer;
 
-import javax.xml.crypto.Data;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 public class TCPServer {
 
@@ -42,9 +34,9 @@ public class TCPServer {
 
     public static void main(String[] args) throws Exception {
         int port = 9999;
+
         ServerSocket listenSocket = new ServerSocket(port);
         System.out.println("Multithreaded Server starts on Port " + port);
-
         Thread thread = new Thread() {
             public void run() {
                 try {
