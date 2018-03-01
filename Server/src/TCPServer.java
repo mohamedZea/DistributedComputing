@@ -35,8 +35,8 @@ public class TCPServer {
         }
     }
 
-    public static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
-    static StocksManager stockManager = new StocksManager();
+    final static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
+    final static StocksManager stockManager = new StocksManager();
 
     public static void main(String[] args) throws Exception {
         int port = 9999;

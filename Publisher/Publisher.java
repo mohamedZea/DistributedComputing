@@ -32,6 +32,7 @@ class Publisher {
 
         int messages = 10;
         int size = 256;
+        boolean infinite = true;
 
 
 
@@ -43,20 +44,23 @@ class Publisher {
         Destination dest = new ActiveMQTopic(destination);
         MessageProducer producer = session.createProducer(dest);
         producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
-
-        for( int i=1; i <= messages; i ++) {
-            String DATA = RandomMessages.Generate();
-            String body = "";
+        int i = 0;
+        while(infinite) {
+           // for (int i = 1; i <= messages; i++) {
+                String DATA = RandomMessages.Generate();
+                String body = "";
             /*for( int j=0; j < size; j ++) {
                 body += DATA.charAt(j%DATA.length());
             }*/
-            body = DATA;
+                body = DATA;
 
-            TextMessage msg = session.createTextMessage(body);
-            msg.setIntProperty("id", i);
-            producer.send(msg);
-            System.out.println("Sended : " +body);
-            Thread.sleep(1000);
+                TextMessage msg = session.createTextMessage(body);
+                msg.setIntProperty("id", i);
+                producer.send(msg);
+                System.out.println("Sended : " + body);
+                Thread.sleep(10000);
+            //}
+            i++;
         }
 
         producer.send(session.createTextMessage("SHUTDOWN"));

@@ -32,25 +32,33 @@ public class Stocks implements Cloneable{
     }
     public void createRandomStock(){
         Random rand = new Random();
-        int valueRand = rand.nextInt(2);
-        if(valueRand == 0)
+        int valueRand = rand.nextInt(StockType.values().length);
+        // random stocktype
+            this._type = StockType.values()[valueRand];
+        // random stockcode
+            valueRand = rand.nextInt(StockCode.values().length);
+            this._code = StockCode.values()[valueRand].toString();
+        // unitprice
+            this._unitPrice = 1000;
+        // random amount number
+            valueRand = rand.nextInt(9999);
+            this._amount = valueRand;
+    }
+    public void createMOMStock(String stockCode, boolean isAsking){
+        Random rand = new Random();
+        int valueRand;
+        // random stocktype
+        if (isAsking)
             this._type = StockType.Ask;
         else
             this._type = StockType.Bid;
-        valueRand = rand.nextInt(3);
-        switch (valueRand){
-            case 0: this._code = StockCode.AAPL.name();
-                break;
-            case 1: this._code = StockCode.IBM.name();
-                break;
-            case 2: this._code = StockCode.MSFT.name();
-                break;
-            default: this._code = StockCode.ORCL.name();
-                break;
-        }
-        valueRand = rand.nextInt(9999);
+        // random stockcode
+        this._code = stockCode;
+        // unitprice
         this._unitPrice = 1000;
+        // random amount number
+        valueRand = rand.nextInt(9999);
         this._amount = valueRand;
-
     }
+
 }
