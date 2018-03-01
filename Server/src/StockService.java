@@ -22,8 +22,8 @@ public class StockService extends Thread {
     @Override
     public void run() {
         String line;
-
         boolean verbunden = true;
+        TCPServer.RegisterConnection(this);
         System.out.println("Thread started: " + this); // Display Thread-ID
         try {
             fromClient = new BufferedReader              // Datastream FROM Client
@@ -51,10 +51,11 @@ public class StockService extends Thread {
             fromClient.close();
             toClient.close();
             client.close(); // End
-            System.out.println("Thread ended: " + this);
         } catch (Exception e) {
             System.out.println(e);
         }
+        System.out.println("Thread ended: " + this);
+        TCPServer.UnregisterConnection(this);
     }
 
     void ProcessRequest(String line) throws IOException {
@@ -67,13 +68,12 @@ public class StockService extends Thread {
         toClient.writeBytes("wait" + "\n");
         //Check Updates
         if(sto._type == StockType.Ask) {
-            synchronized (sto) {
+
                 AskForStock(sto);
-            }
         }
         else
         {
-            BidForStock();
+          //  BidForStock();
         }
     }
 
@@ -90,25 +90,29 @@ public class StockService extends Thread {
 
     private void AskForStock(Stocks sto) {
         Optional<Stocks> tmp = null;
-        while (!(tmp = stockManager.FindMatch(sto)).isPresent()){
+        synchronized (sto) {
+            while (!(tmp = stockManager.FindMatch(sto)).isPresent()) {
+            }
+            Match(sto, tmp.get());
         }
-        Match(sto,tmp.get());
     }
 
     void Match(Stocks ask, Stocks bid){
         //Prepare Message for bidder
         Stocks cpyToBid = (Stocks)ask.Clone();
         cpyToBid._owner = bid._owner;
+        cpyToBid._unitPrice = bid._unitPrice;
         //Prepare Message for asker
         Stocks cpyToAsk = (Stocks)ask.Clone();
         cpyToAsk._type = StockType.Bid;
+        cpyToAsk._unitPrice = bid._unitPrice;
 
         System.out.println("Match Found between " + cpyToBid._owner + " & " + cpyToAsk._owner);
         try {
             NotifyOwner(cpyToBid);
             SendStocks(cpyToAsk);
             stockManager.UpdateStocks(ask,bid);
-            CsvModel.logToCSV(bid, ask);
+            CsvModel.logToCSV(cpyToBid, cpyToAsk);
         }
         catch (IOException e1)
         {
@@ -130,12 +134,11 @@ public class StockService extends Thread {
 
     public void SendStocks(Stocks sto){
         try {
-            if(fromClient.read() != -1){
+
                 toClient.writeBytes(Stocks.Serialize(sto) + "\n");
-            }else{
-                System.out.println("Imposible to reach " + sto._owner);
-            }
+
         } catch (IOException e) {
+        System.out.println("Imposible to reach " + sto._owner);
             e.printStackTrace();
         }
     }

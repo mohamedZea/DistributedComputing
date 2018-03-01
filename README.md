@@ -5,6 +5,7 @@
 - Code (AAPL,IBM,MSFT,ORCL)
 - Amount
 - Price
+- Owner
 
 ## Processing
 ### Client
