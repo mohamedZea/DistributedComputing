@@ -39,7 +39,8 @@ public class Stocks implements Cloneable{
             valueRand = rand.nextInt(StockCode.values().length);
             this._code = StockCode.values()[valueRand].toString();
         // unitprice
-            this._unitPrice = 1000;
+            valueRand = rand.nextInt(12-10)+10;
+            this._unitPrice = valueRand;
         // random amount number
             valueRand = rand.nextInt(9999);
             this._amount = valueRand;
@@ -55,7 +56,8 @@ public class Stocks implements Cloneable{
         // random stockcode
         this._code = stockCode;
         // unitprice
-        this._unitPrice = 1000;
+        valueRand = rand.nextInt(12-10)+10;
+        this._unitPrice = valueRand;
         // random amount number
         valueRand = rand.nextInt(9999);
         this._amount = valueRand;

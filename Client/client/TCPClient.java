@@ -51,26 +51,12 @@ public class TCPClient {
         Stocks sto = new Stocks();
         Stocks sto2 = new Stocks();
         // random stock request creation
-        //sto.createRandomStock();
+        sto.createRandomStock();
 
-        sto._type = StockType.Bid;
-        sto._code = StockCode.ORCL.name();
-        sto._amount = 1000;
-        sto._unitPrice = 1000;
         // we display it in the terminal
         System.out.println("--->Trader request: " + Stocks.Serialize(sto));
         // we send it to the server
         toServer.writeBytes(Stocks.Serialize(sto)+ '\n');
-
-/*
-        sto2._type= StockType.Bid;
-        sto2._code = StockCode.ORCL.name();
-        sto2._amount = 1010;
-        sto2._unitPrice = 1000;
-        System.out.println("--->Trader request2: " + Stocks.Serialize(sto2));
-        toServer.writeBytes(Stocks.Serialize(sto2)+ '\n');
-*/
-
     }
 
     private static boolean receiveResponse() throws IOException {

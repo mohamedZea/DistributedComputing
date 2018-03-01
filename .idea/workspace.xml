@@ -2,10 +2,212 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0a33528-295b-49a5-84a9-4b52c047d703" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/Client.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/ImprovedTraders.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/PriceClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/StockCode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/StockType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/Stocks.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/TCPClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/client/UserInterface.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/NewsType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/Publisher.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/RandomMessages.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/StockCode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/CsvModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/StockService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/StockType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/Stocks.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/StocksManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/TCPServer$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/TCPServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-broker-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-client-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-console-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-jaas-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-kahadb-store-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-openwire-legacy-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-protobuf-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-spring-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/activemq-web-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/camel/activemq-camel-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/camel/camel-core-2.19.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/camel/camel-jms-2.19.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/camel/camel-spring-2.19.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/extra/mqtt-client-1.14.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/geronimo-jms_1.1_spec-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/geronimo-jta_1.0.1B_spec-1.0.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.8.2-javadoc.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.8.2-sources.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.8.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/hawtbuf-1.11.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jcl-over-slf4j-1.7.25.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activeio-core-3.1.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-amqp-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-http-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-jdbc-store-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-jms-pool-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-leveldb-store-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-log4j-appender-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-mqtt-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-partition-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-pool-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-runtime-config-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-shiro-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/activemq-stomp-5.15.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-beanutils-1.9.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-codec-1.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-collections-3.2.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-dbcp2-2.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-lang-2.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-net-3.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/commons-pool2-2.4.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/geronimo-j2ee-connector_1.5_spec-2.0.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/guava-18.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/hawtbuf-proto-1.11.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/hawtdispatch-1.22.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/hawtdispatch-scala-2.11-1.22.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/hawtdispatch-transport-1.22.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/hawtjni-runtime-1.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/httpclient-4.5.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/httpcore-4.4.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/insight-log-core-1.2.0.Beta4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/insight-log4j-1.2.0.Beta4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jackson-annotations-2.6.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jackson-core-2.6.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jackson-databind-2.6.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jasypt-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jasypt-spring31-1.9.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jaxb2-basics-runtime-0.6.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jettison-1.3.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/jmdns-3.4.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/leveldb-0.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/leveldb-api-0.9.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/leveldbjni-1.8.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/log4j-1.2.17.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/org.apache.servicemix.bundles.josql-1.5_5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/org.linkedin.util-core-1.4.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/org.linkedin.zookeeper-impl-1.4.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/proton-j-0.25.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/scala-library-2.11.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/shiro-core-1.2.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/shiro-spring-1.2.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/slf4j-log4j12-1.7.25.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/snappy-0.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/snappy-java-1.1.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-aop-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-beans-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-context-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-core-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-expression-4.3.10.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-jms-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-oxm-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/spring-tx-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/velocity-1.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/xbean-spring-4.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/xpp3-1.1.4c.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/xstream-1.4.10.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/optional/zookeeper-3.4.6.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/apache-el-8.0.33.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/apache-jsp-8.0.33.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/apache-jsp-9.2.22.v20170606.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/apache-jstl-9.2.22.v20170606.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/asm-5.0.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/geronimo-annotation_1.0_spec-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/jdom-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/jetty-all-9.2.22.v20170606.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/jolokia-core-1.3.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/json-simple-1.1.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/org.eclipse.jdt.core-3.8.2.v20130121.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/rome-1.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/spring-web-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/spring-webmvc-4.3.9.RELEASE.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/taglibs-standard-impl-1.2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/taglibs-standard-spec-1.2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/tomcat-servlet-api-8.0.24.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/web/tomcat-websocket-api-8.0.24.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/ws-commons-util-1.0.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xmlrpc-client-3.1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xmlrpc-common-3.1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/xmlrpc-server-3.1.3.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/CsvModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/Plugins/java-json.jar/java-json.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/StockService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/StockType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/Stocks.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/StocksManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/TCPServer$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/TCPServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/Client.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/PriceClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/StockCode.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/StockType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/Stocks.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/TCPClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/client/UserInterface.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/examples/EchoService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/examples/MultithreadedTCPServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/examples/TCPClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/examples/TCPServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/examples/UserInterface.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/CsvModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/StockService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/StockType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/Stocks.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/StocksManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/TCPServer$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/TCPServer.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/client/UserInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Client/out/production/Client/Client.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/Publisher.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Publisher/out/production/Publisher/Publisher.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/.idea/libraries/lib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/Server.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/out/production/Server/log.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/src/StockType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/DistributedComputing/Client.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Examples/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Server/Server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DistributedComputing.iml" afterPath="$PROJECT_DIR$/.idea/DistributedComputing.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Client/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Publisher/Publisher.java" afterPath="$PROJECT_DIR$/Publisher/Publisher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log.csv" afterPath="$PROJECT_DIR$/log.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/client/Stocks.java" afterPath="$PROJECT_DIR$/Client/client/Stocks.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Client/client/TCPClient.java" afterPath="$PROJECT_DIR$/Client/client/TCPClient.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,15 +218,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TCPServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/src/TCPServer.java">
+      <file leaf-file-name="TCPClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/client/TCPClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="96" column="31" lean-forward="false" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
+            <state relative-caret-position="-619">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayGraphics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/client/DisplayGraphics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Client/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/client/UserInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding>
-                <element signature="e#3006#3007#0" expanded="true" />
-                <element signature="e#3044#3045#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Publisher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Publisher/Publisher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -32,15 +274,15 @@
       <file leaf-file-name="StockService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/src/StockService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+            <state relative-caret-position="323">
+              <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="StockType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/StockType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -49,31 +291,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="log.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/log.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedReader.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2499">
-              <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StocksManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/StocksManager.java">
+      <file leaf-file-name="TimeStocks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/TimeStocks.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StockType.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/client/StockType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stocks.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Client/client/Stocks.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -110,6 +352,10 @@
         <option value="$PROJECT_DIR$/Server/src/StockService.java" />
         <option value="$PROJECT_DIR$/Server/src/TCPServer.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.idea/DistributedComputing.iml" />
+        <option value="$PROJECT_DIR$/Server/src/StockType.java" />
+        <option value="$PROJECT_DIR$/Client/client/UserInterfac.java" />
+        <option value="$PROJECT_DIR$/Client/client/UserInterface.java" />
       </list>
     </option>
   </component>
@@ -119,6 +365,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="581" />
+    <option name="y" value="-18" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -134,40 +387,71 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
+              <item name="Client" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
+              <item name="Publisher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DistributedComputing" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DistributedComputing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Publisher" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -360,6 +644,8 @@
       <workItem from="1519827716406" duration="617000" />
       <workItem from="1519897222007" duration="5401000" />
       <workItem from="1519909676901" duration="3084000" />
+      <workItem from="1519915816560" duration="12000" />
+      <workItem from="1519915892570" duration="228000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed some errors">
       <created>1519901750968</created>
@@ -386,36 +672,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29616000" />
+    <option name="totallyTimeSpent" value="29856000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.49573562" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.5042644" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3188406" sideWeight="0.4914712" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39782608" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26918977" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27452025" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910814" sideWeight="0.4936034" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32887402" sideWeight="0.49573562" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -486,11 +772,97 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Server/src/TCPServer.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StocksManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/TCPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/BufferedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2499">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StocksManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/TCPServer.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
           <folding>
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -529,32 +901,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/StocksManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="17">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/log.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/StockService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -569,14 +926,190 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/TCPServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
+        <state relative-caret-position="418">
           <caret line="96" column="31" lean-forward="false" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="31" />
           <folding>
-            <element signature="e#3006#3007#0" expanded="true" />
-            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/DistributedComputing.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Publisher/StockCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Publisher/Publisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/StockType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/TimeStocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/Stocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/UserInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/StockType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-619">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/DisplayGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>actionmailer (v5.1.4, ruby-2.4.1-p111) [gem]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>DistributedComputing</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
