@@ -68,13 +68,12 @@ public class StockService extends Thread {
         toClient.writeBytes("wait" + "\n");
         //Check Updates
         if(sto._type == StockType.Ask) {
-            synchronized (sto) {
+
                 AskForStock(sto);
-            }
         }
         else
         {
-            BidForStock();
+          //  BidForStock();
         }
     }
 
@@ -91,9 +90,11 @@ public class StockService extends Thread {
 
     private void AskForStock(Stocks sto) {
         Optional<Stocks> tmp = null;
-        while (!(tmp = stockManager.FindMatch(sto)).isPresent()){
+        synchronized (sto) {
+            while (!(tmp = stockManager.FindMatch(sto)).isPresent()) {
+            }
+            Match(sto, tmp.get());
         }
-        Match(sto,tmp.get());
     }
 
     void Match(Stocks ask, Stocks bid){
@@ -131,12 +132,11 @@ public class StockService extends Thread {
 
     public void SendStocks(Stocks sto){
         try {
-            if(fromClient.read() != -1){
+
                 toClient.writeBytes(Stocks.Serialize(sto) + "\n");
-            }else{
-                System.out.println("Imposible to reach " + sto._owner);
-            }
+
         } catch (IOException e) {
+        System.out.println("Imposible to reach " + sto._owner);
             e.printStackTrace();
         }
     }

@@ -75,14 +75,14 @@ public class TCPServer {
 
         while (true)
         {
-            if(ClientsList.size() <= MAX_CONNECTIONS) {
+            int num = ClientsList.size();
+            if(num < MAX_CONNECTIONS) {
                 Socket client = listenSocket.accept();
                 System.out.println("Connection with: " +     // Output connection
                         client.getRemoteSocketAddress());   // (Client) address
                 StockService s = new StockService(client, stockManager);
                 s.start();
             }
-
         }
 
     }
