@@ -101,9 +101,11 @@ public class StockService extends Thread {
         //Prepare Message for bidder
         Stocks cpyToBid = (Stocks)ask.Clone();
         cpyToBid._owner = bid._owner;
+        cpyToBid._unitPrice = bid._unitPrice;
         //Prepare Message for asker
         Stocks cpyToAsk = (Stocks)ask.Clone();
         cpyToAsk._type = StockType.Bid;
+        cpyToAsk._unitPrice = bid._unitPrice;
 
         System.out.println("Match Found between " + cpyToBid._owner + " & " + cpyToAsk._owner);
         try {
