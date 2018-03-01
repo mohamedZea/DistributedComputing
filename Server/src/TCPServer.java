@@ -16,24 +16,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
 
-public class TCPServer {
+public class TCPServer  {
 
-    static final int MAX_CONNECTIONS = 10;
-
-    public double getPrice(String code) {
-        ArrayList<Stocks> list = new ArrayList<Stocks>();
-
-        stockManager.TransactionList.forEach(x -> {if(x._code.equals(code)){
-            list.add(x);
-        }
-        });
-
-        if(list.isEmpty()){
-            return -1;
-        }else{
-            return list.get(list.size()-1)._unitPrice;
-        }
-    }
+    static final int MAX_CONNECTIONS = 100;
 
     public static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
     static StocksManager stockManager = new StocksManager();
@@ -43,39 +28,13 @@ public class TCPServer {
 
         ServerSocket listenSocket = new ServerSocket(port);
         System.out.println("Multithreaded Server starts on Port " + port);
-        Thread thread = new Thread() {
-            public void run() {
-                try {
 
-                    WebServer webServer = new WebServer(8080);
+        PriceServer priceServer =  new PriceServer();
+        Thread t = new Thread(priceServer);
+        t.start();
 
-                    XmlRpcServer xmlRpcServer = webServer.getXmlRpcServer();
-                    PropertyHandlerMapping phm = new PropertyHandlerMapping();
-
-                    phm.addHandler("Price", TCPServer.class);
-                    xmlRpcServer.setHandlerMapping(phm);
-
-                    XmlRpcServerConfigImpl serverConfig =
-                            (XmlRpcServerConfigImpl) xmlRpcServer.getConfig();
-                    // serverConfig.setEnabledForExtensions(true);
-                    // serverConfig.setContentLengthOptional(false);
-
-                    webServer.start();
-
-                    System.out.println("The Price Server has been started...");
-
-                } catch (Exception exception)
-
-                {
-                    System.err.println("JavaServer: " + exception);
-                }
-            }
-        };
-        thread.start();
-
-        while (true)
-        {
-            if(ClientsList.size() <= MAX_CONNECTIONS) {
+        while (true) {
+            if (ClientsList.size() <= MAX_CONNECTIONS) {
                 Socket client = listenSocket.accept();
                 System.out.println("Connection with: " +     // Output connection
                         client.getRemoteSocketAddress());   // (Client) address

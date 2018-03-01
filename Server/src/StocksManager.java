@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Optional;
 
 public class StocksManager {
 
     public ArrayList<Stocks> AsksList = new ArrayList<Stocks>();
     public ArrayList<Stocks> BidsList = new ArrayList<Stocks>();
-    public ArrayList<Stocks> TransactionList = new ArrayList<Stocks>();
+    public ArrayList<TimeStocks> TransactionList = new ArrayList<TimeStocks>();
 
     public void RegisterStock(Stocks sto)
     {
@@ -52,7 +53,13 @@ public class StocksManager {
         {
             BidsList.remove(bid);
         }
-        TransactionList.add(ask);
+
+        TimeStocks ts = new TimeStocks();
+        ts.date = new Date();
+        ts.stocks = ask;
+
+        TransactionList.add(ts);
+        System.out.println("Add new tansaction : " + ask._code);
         AsksList.remove(ask);
     }
 }

@@ -1,4 +1,5 @@
 package client;
+
 import com.google.gson.Gson;
 
 import com.google.gson.Gson;
@@ -20,41 +21,44 @@ public class TCPClient {
     public static void main(String[] args) throws Exception {
 
         try {
-            socket = new Socket("172.17.1.243", 9999);
+            socket = new Socket("localhost", 9999);
             toServer = new DataOutputStream(socket.getOutputStream());
             InputStreamReader dataInputStream = new InputStreamReader(socket.getInputStream());
             fromServer = new BufferedReader(dataInputStream);
             do {
-                sendRequest();
-                receiveResponse();
-            }while(true);/*
+                for (int i = 0; i < 10; i++) {
+                    sendRequest();
+                    receiveResponse();
+                }
+
+            } while (true);/*
             toServer.writeBytes("."+ '\n');
             socket.close();
             toServer.close();
             fromServer.close();*/
-        }catch(Exception e){
-               System.err.println("Exception: " + e.toString());
-            }
+        } catch (Exception e) {
+            System.err.println("Exception: " + e.toString());
         }
+    }
 
     private static void sendRequest() throws IOException {
         Stocks sto = new Stocks();
         sto.createRandomStock();
         System.out.println(Stocks.Serialize(sto));
-        toServer.writeBytes(Stocks.Serialize(sto)+ '\n');
+        toServer.writeBytes(Stocks.Serialize(sto) + '\n');
     }
 
     private static boolean receiveResponse() throws IOException {
         boolean test = true;
         String serverResponse = fromServer.readLine();
         user.output("--->Server answers: " + serverResponse + '\n');
-        if (!serverResponse.equals("wait")){
-            try{
+        if (!serverResponse.equals("wait")) {
+            try {
                 Stocks.Deserialize(serverResponse);
                 user.output("---> MATCH <---");
                 test = false;
-            }catch(Exception e){
-               // e.printStackTrace();
+            } catch (Exception e) {
+                // e.printStackTrace();
             }
         }
         return test;
