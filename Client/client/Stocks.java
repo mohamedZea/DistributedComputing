@@ -11,16 +11,17 @@ public class Stocks implements Cloneable{
     public double _unitPrice;
     public String _owner;
 
+    // json serialize function
     public static String Serialize(Stocks obj){
         Gson gs = new Gson();
         return gs.toJson(obj);
     }
-
+    // json deserialize function
     public static Stocks Deserialize(String obj){
         Gson gs = new Gson();
         return gs.fromJson(obj,Stocks.class);
     }
-
+    // cloning function
     public Object Clone(){
         Object o = null;
         try {
@@ -30,6 +31,7 @@ public class Stocks implements Cloneable{
         }
         return o;
     }
+    // random request generator
     public void createRandomStock(){
         Random rand = new Random();
         int valueRand = rand.nextInt(StockType.values().length);
@@ -45,6 +47,7 @@ public class Stocks implements Cloneable{
             valueRand = rand.nextInt(9999);
             this._amount = valueRand;
     }
+    // specific random request generator, based on a specified stockcode and stocktype
     public void createMOMStock(String stockCode, boolean isAsking){
         Random rand = new Random();
         int valueRand;
