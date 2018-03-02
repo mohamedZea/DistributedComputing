@@ -30,7 +30,7 @@ public class PriceHistoryClient {
         config.setServerURL(new URL("http://127.0.0.1:8080/xmlrpc"));
         XmlRpcClient client = new XmlRpcClient();
         client.setConfig(config);
-
+        boolean isPossible = true;
 
         while (true) {
             System.out.print("Enter a stock code (example : AAPL) : ");
@@ -71,13 +71,17 @@ public class PriceHistoryClient {
             listPrice = new Double[result.length];
 
             if (result.length == 0) {
-                System.out.print("No price found for this stock during this period. Try Again.");
+                System.out.println("No price found for this stock during this period. Try Again.");
             } else {
+
                 for (int i = 0; i < result.length; i++) {
                     listPrice[i] = (Double) result[i];
+                    System.out.print(listPrice[i] + " ; ");
                 }
-
-                new DisplayGraphics().launch(DisplayGraphics.class);
+                if (isPossible) {
+                    isPossible = false;
+                    new DisplayGraphics().launch(DisplayGraphics.class);
+                }
             }
         }
     }

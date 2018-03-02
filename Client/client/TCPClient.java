@@ -1,4 +1,5 @@
 package client;
+
 import com.google.gson.Gson;
 
 import com.google.gson.Gson;
@@ -21,16 +22,18 @@ public class TCPClient {
 
         try {
             // creating the socket and the input/output streams
-            socket = new Socket("172.17.1.243", 9999);
+            socket = new Socket("localhost", 9999);
             toServer = new DataOutputStream(socket.getOutputStream());
             InputStreamReader dataInputStream = new InputStreamReader(socket.getInputStream());
             fromServer = new BufferedReader(dataInputStream);
             // a big fat loop to spam the server
-            while(true) {
-                sendRequest();
-                while(!fromServer.readLine().contains("_type")){
-                    if (receiveResponse())
-                        break;
+            while (true) {
+                for (int i = 0; i < 10; i++) {
+                    sendRequest();
+                    while (!fromServer.readLine().contains("_type")) {
+                        if (receiveResponse())
+                            break;
+                    }
                 }
             }
             /*
@@ -38,14 +41,14 @@ public class TCPClient {
             socket.close();
             toServer.close();
             fromServer.close();*/
-        }catch(Exception e){
-                toServer.writeBytes("."+ '\n');
-                socket.close();
-                toServer.close();
-                fromServer.close();
-                System.err.println("Exception: " + e.toString());
-            }
+        } catch (Exception e) {
+            toServer.writeBytes("." + '\n');
+            socket.close();
+            toServer.close();
+            fromServer.close();
+            System.err.println("Exception: " + e.toString());
         }
+    }
 
     private static void sendRequest() throws IOException {
         Stocks sto = new Stocks();
@@ -56,7 +59,7 @@ public class TCPClient {
         // we display it in the terminal
         System.out.println("--->Trader request: " + Stocks.Serialize(sto));
         // we send it to the server
-        toServer.writeBytes(Stocks.Serialize(sto)+ '\n');
+        toServer.writeBytes(Stocks.Serialize(sto) + '\n');
     }
 
     private static boolean receiveResponse() throws IOException {
@@ -66,12 +69,12 @@ public class TCPClient {
         // we display it in the terminal
         user.output("--->Server answers: " + serverResponse + '\n');
         // if the response is actually a match
-        if (!serverResponse.equals("wait")){
-            try{
+        if (!serverResponse.equals("wait")) {
+            try {
                 Stocks.Deserialize(serverResponse);
                 user.output("---> MATCH <---");
                 test = true;
-            }catch(Exception e){
+            } catch (Exception e) {
                 System.out.println("Exception: " + e.toString());
                 //e.printStackTrace();
             }
