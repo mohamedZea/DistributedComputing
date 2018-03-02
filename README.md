@@ -24,9 +24,12 @@ Dispatch actions between clients regarding asks & bids
 ## Explore the project
 
 Starting the server (broker) : Server/src/TCPServer
+
 Starting the publicher : Publisher/Publisher
 
 ---
 Starting the client (trader) : Client/client/TPCClient
+
 Starting the price client : Client/client/PriceClient
+
 Starting the client (improve trader) : Client/client/ImprovedTraders
