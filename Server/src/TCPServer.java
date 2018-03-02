@@ -20,21 +20,6 @@ public class TCPServer {
 
     static final int MAX_CONNECTIONS = 10;
 
-    public double getPrice(String code) {
-        ArrayList<Stocks> list = new ArrayList<Stocks>();
-
-        stockManager.TransactionList.forEach(x -> {if(x._code.equals(code)){
-            list.add(x);
-        }
-        });
-
-        if(list.isEmpty()){
-            return -1;
-        }else{
-            return list.get(list.size()-1)._unitPrice;
-        }
-    }
-
     final static ArrayList<StockService> ClientsList = new ArrayList<StockService>();
     final static StocksManager stockManager = new StocksManager();
 
@@ -46,24 +31,8 @@ public class TCPServer {
         Thread thread = new Thread() {
             public void run() {
                 try {
-
-                    WebServer webServer = new WebServer(8080);
-
-                    XmlRpcServer xmlRpcServer = webServer.getXmlRpcServer();
-                    PropertyHandlerMapping phm = new PropertyHandlerMapping();
-
-                    phm.addHandler("Price", TCPServer.class);
-                    xmlRpcServer.setHandlerMapping(phm);
-
-                    XmlRpcServerConfigImpl serverConfig =
-                            (XmlRpcServerConfigImpl) xmlRpcServer.getConfig();
-                    // serverConfig.setEnabledForExtensions(true);
-                    // serverConfig.setContentLengthOptional(false);
-
-                    webServer.start();
-
-                    System.out.println("The Price Server has been started...");
-
+                    PriceServer priceServer = new PriceServer();
+                    priceServer.run();
                 } catch (Exception exception)
 
                 {

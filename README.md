@@ -32,4 +32,10 @@ Starting the client (trader) : Client/client/TPCClient
 
 Starting the price client : Client/client/PriceClient
 
+Starting the price history client : Client/client/PriceHistoryClient
+	-> Enter the Stock code 
+	-> Enter the date and hour of the beginning of the history
+	-> Enter the date and hour of the end of the history
+	-> It will show a graph but only the first time
+
 Starting the client (improve trader) : Client/client/ImprovedTraders
