@@ -20,24 +20,32 @@ public class PriceHistoryClient {
 
     public static Double[] listPrice;
 
+    /**
+     * Main program of PriceHistoryClient : It will create the xmlRpc Client and call the procedure with parameters
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
 
         UserInterface user = new UserInterface();
 
         XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();
-
+        // We bound the configuration
         config.setServerURL(new URL("http://127.0.0.1:8080/xmlrpc"));
         XmlRpcClient client = new XmlRpcClient();
         client.setConfig(config);
         boolean isPossible = true;
 
         while (true) {
-            System.out.print("Enter a stock code (example : AAPL) : ");
-            String action = user.input();
 
-            Date beginDate = new Date();
-            Date endDate = new Date();
+            //We need some information to transmit to the server
+            System.out.print("Enter a stock code (example : AAPL) : ");
+            String action = user.input();// code of the stock
+
+            Date beginDate = new Date(); // Date og the beginning of the history
+            Date endDate = new Date();// Date og the end of the history
 
 
             System.out.print("Enter the beginning day history (Today :" + beginDate.getDate() + " ) : ");
@@ -67,11 +75,11 @@ public class PriceHistoryClient {
 
             Object[] params = new Object[]{action, beginDate, endDate};
 
-            Object[] result = (Object[]) client.execute("Price.getHistory", params);
+            Object[] result = (Object[]) client.execute("Price.getHistory", params); // We call the procedure with params and we handle the result
             listPrice = new Double[result.length];
 
             if (result.length == 0) {
-                System.out.println("No price found for this stock during this period. Try Again.");
+                System.out.println("No price found for this stock during this period. Try Again."); // if we don't have result
             } else {
 
                 for (int i = 0; i < result.length; i++) {
@@ -80,7 +88,7 @@ public class PriceHistoryClient {
                 }
                 if (isPossible) {
                     isPossible = false;
-                    new DisplayGraphics().launch(DisplayGraphics.class);
+                    new DisplayGraphics().launch(DisplayGraphics.class); // show a graph but only once (JAVAFX launch, doesn't permit to launch more than one time and I didn't found a solution)
                 }
             }
         }
